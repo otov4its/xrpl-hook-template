@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd "$parent_path"
+
+src=target/wasm32-unknown-unknown/debug/examples/
+dst=examples/
+
+cargo build --examples && \
+    cp --verbose "$src"/*.wasm "$dst"/
