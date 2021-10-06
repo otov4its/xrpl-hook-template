@@ -1,49 +1,84 @@
+# XRPL Hook Template
+
+This bootstrap template allows you to write XRPL hooks in Rust.
+To view examples see [examples](examples) folder.
+
 # XRPL Hackathon 2021
 
 The hook template was written as part of [XRPL Hackathon 2021](https://xrpl-hackathon-2021.devpost.com/)
 
 ![](XRPL2021HACK.jpg)
 
+# Prerequisites
+
+1. We need `rustup` if not already installed
+```bash
+    $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+```bash
+    $ source ~/.bashrc
+```
+
+2. Add wasm32 target
+
+```bash
+    $ rustup target add wasm32-unknown-unknown
+```
+
+
+3. We need `nodejs` for setting hooks to XRPL
+
+```bash
+    $ curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+    $ sudo apt-get install -y nodejs
+```
+
+# Clone
+
+Clone this repo
+
+```bash
+$ git clone https://github.com/otov4its/xrpl-hook-template.git
+$ cd xrpl-hook-template/
+```
+
 # Workflow
 
 ## Step 0
-Add wasm target
-```bash
-$ rustup target add wasm32-unknown-unknown
-```
-
-## Step 1
-Clone
-```bash
-$ git clone https://github.com/otov4its/xrpl-hook-template.git
-```
-
-## Step 2
 Make changes in `src/lib.rs`
 
-## Step 3
+## Step 1
 Build
 ```bash
 $ ./build
 ```
 
-## Step 4
+## Step 2
 Set
 ```bash
-$ node set_hook s*** hook_debug
+$ nodejs set_hook s*** hook_debug
 ```
 
-## Step 5
+## Step 3
 Check
 ```bash
-node pay s*** 1000 r***
+nodejs pay s*** 1000 r***
 ```
 
-## Step 6
+## Step 4
 
-Goto -> "Step 2" :)
+Goto -> "Step 0" :)
 
 ## Release
+
 ```bash
-$ node set_hook s*** hook
+$ nodejs set_hook s*** hook
 ```
+
+# Building examples
+
+```bash
+$ ./build_examples
+```
+The builded wasm are contained in [examples](examples) folder
