@@ -19,7 +19,7 @@ The hook template was written as part of [XRPL Hackathon 2021](https://xrpl-hack
 
 1. We need `rustup` if not already installed
 ```bash
-    $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 ```
 
 ```bash
@@ -55,19 +55,26 @@ $ cd xrpl-hook-template/
 Make changes in `src/lib.rs`
 
 ## Step 1
+
 Build
+
 ```bash
 $ ./build
 ```
 
+The builded wasm hook is contained in the project root directory.
+
 ## Step 2
-Set
+
+Set hook
+
 ```bash
 $ nodejs set_hook s*** hook_debug
 ```
 
 ## Step 3
 Check
+
 ```bash
 nodejs pay s*** 1000 r***
 ```
@@ -87,4 +94,10 @@ $ nodejs set_hook s*** hook
 ```bash
 $ ./build_examples
 ```
-The builded wasm are contained in [examples](examples) folder
+The builded wasm are contained in [examples](examples) folder.
+
+To set example hook run:
+
+```bash
+$ nodejs set_hook s*** examples/HOOKNAME
+```
