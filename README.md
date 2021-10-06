@@ -1,21 +1,21 @@
 # XRPL Hook Template
 
-This bootstrap template allows you to write XRPL hooks in Rust.
-
 _*Before you begin, it is highly recommended that you read 
 the [official docs](https://xrpl-hooks.readme.io/) carefully._
 
+This bootstrap template allows you to write XRPL hooks in Rust.
+
 You may need:
 
-- [Examples](examples)
+- [Examples](examples) to view use cases
 
-- [Rust Api Documentation](https://docs.rs/xrpl-hooks/)
+- [Rust Hooks Api Documentation](https://docs.rs/xrpl-hooks/)
 
-- [Hooks testnet](https://hooks-testnet.xrpl-labs.com/) where you can create test accounts, view transactions, etc.
+- [Hooks Testnet](https://hooks-testnet.xrpl-labs.com/) where you can create test accounts, view transactions, etc.
 
 # XRPL Hackathon 2021
 
-The hook template was written as part of [XRPL Hackathon 2021](https://xrpl-hackathon-2021.devpost.com/)
+This is part of the [XRPL Hooks Rust](https://devpost.com/software/xrpl-hooks-rust) project developed for [XRPL Hackathon 2021](https://xrpl-hackathon-2021.devpost.com/).
 
 ![](XRPL2021HACK.jpg)
 
