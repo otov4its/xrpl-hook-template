@@ -1,7 +1,13 @@
 # XRPL Hook Template
 
 This bootstrap template allows you to write XRPL hooks in Rust.
+
 To view examples see [examples](examples) folder.
+
+Before you begin, it is highly recommended that you read 
+the [official docs](https://xrpl-hooks.readme.io/) carefully.
+
+[Rust Api Documentation](https://docs.rs/xrpl-hooks/)
 
 # XRPL Hackathon 2021
 
@@ -27,7 +33,7 @@ The hook template was written as part of [XRPL Hackathon 2021](https://xrpl-hack
 ```
 
 
-3. We need `nodejs` for setting hooks to XRPL
+3. We need `nodejs v12` for setting hooks to XRPL
 
 ```bash
     $ curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
