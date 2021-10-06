@@ -18,26 +18,24 @@ The hook template was written as part of [XRPL Hackathon 2021](https://xrpl-hack
 # Prerequisites
 
 1. We need `rustup` if not already installed
-```bash
-    $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-```
 
 ```bash
-    $ source ~/.bashrc
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+source ~/.bashrc
 ```
 
 2. Add wasm32 target
 
 ```bash
-    $ rustup target add wasm32-unknown-unknown
+rustup target add wasm32-unknown-unknown
 ```
 
 
 3. We need `nodejs v12` for setting hooks to XRPL
 
 ```bash
-    $ curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-    $ sudo apt-get install -y nodejs
+curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
 ```
 
 # Clone
@@ -45,8 +43,8 @@ The hook template was written as part of [XRPL Hackathon 2021](https://xrpl-hack
 Clone this repo
 
 ```bash
-$ git clone https://github.com/otov4its/xrpl-hook-template.git
-$ cd xrpl-hook-template/
+git clone https://github.com/otov4its/xrpl-hook-template.git
+cd xrpl-hook-template/
 ```
 
 # Workflow
@@ -59,7 +57,7 @@ Make changes in `src/lib.rs`
 Build
 
 ```bash
-$ ./build
+./build
 ```
 
 The builded wasm hook is contained in the project root directory.
@@ -69,7 +67,7 @@ The builded wasm hook is contained in the project root directory.
 Set hook
 
 ```bash
-$ nodejs set_hook s*** hook_debug
+nodejs set_hook s*** hook_debug
 ```
 
 ## Step 3
@@ -86,18 +84,18 @@ Goto -> "Step 0" :)
 ## Release
 
 ```bash
-$ nodejs set_hook s*** hook
+nodejs set_hook s*** hook
 ```
 
 # Building examples
 
 ```bash
-$ ./build_examples
+./build_examples
 ```
 The builded wasm are contained in [examples](examples) folder.
 
 To set example hook run:
 
 ```bash
-$ nodejs set_hook s*** examples/HOOKNAME
+nodejs set_hook s*** examples/HOOKNAME
 ```
